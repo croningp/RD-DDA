@@ -1,0 +1,2 @@
+In this experiment, we use the code to calculate the shape transformation for a given seed wtih rods. 
+The role of silver is considered and the results are recorded in orkney/Chemobot/Nanobot-Monte_Carlo_Simulation/Au_Ag_7

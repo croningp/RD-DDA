@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  DDA_RankOne_Decomp
+ </title>
+ <link href="HTMLFiles/DDA_RankOne_Decomp.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="font-size: Floor[125. Inherited]%;">
+
+<p class="Title">
+ Rank-One Decomposition in Discrete Dipole Approximation
+</p>
+
+
+
+<p class="Section">
+ 1. Basic Properties of metallic nanoparticles
+</p>
+
+
+
+<p class="Subsubsection">
+ Complex refractive index of materials
+</p>
+
+
+
+<p class="Text">
+ Reading and plotting the refractive index data for gold and silver metals. The refractive index data is downloaded from,&#8232;https://refractiveindex.info/<br />P. B. Johnson and R. W. Christy. Optical constants of the noble metals, Phys. Rev. B 6, 4370-4379 (1972)<br />The same refractive indices were used in the simulations using Discrete Dipole Method.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_1.png" alt="DDA_RankOne_Decomp_1.png" width="304" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_2.png" alt="DDA_RankOne_Decomp_2.png" width="822" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_3.png" alt="DDA_RankOne_Decomp_3.png" width="505" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_4.png" alt="DDA_RankOne_Decomp_4.png" width="545" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_5.gif" alt="DDA_RankOne_Decomp_5.gif" width="294" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_6.png" alt="DDA_RankOne_Decomp_6.png" width="221" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_7.png" alt="DDA_RankOne_Decomp_7.png" width="94" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_8.gif" alt="DDA_RankOne_Decomp_8.gif" width="333" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_9.png" alt="DDA_RankOne_Decomp_9.png" width="259" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_10.png" alt="DDA_RankOne_Decomp_10.png" width="94" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Plotting the refractive indices,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_11.png" alt="DDA_RankOne_Decomp_11.png" width="1245" height="100" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_12.png" alt="DDA_RankOne_Decomp_12.png" width="1265" height="100" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_13.png" alt="DDA_RankOne_Decomp_13.png" width="546" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_14.gif" alt="DDA_RankOne_Decomp_14.gif" width="500" height="291" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_15.gif" alt="DDA_RankOne_Decomp_15.gif" width="703" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_16.png" alt="DDA_RankOne_Decomp_16.png" width="998" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_17.png" alt="DDA_RankOne_Decomp_17.png" width="1018" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Interpolating the refractive index coefficients, <span><em>n</em><em>,</em><em> </em><em>k</em></span> for gold and silver.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_18.png" alt="DDA_RankOne_Decomp_18.png" width="528" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_19.gif" alt="DDA_RankOne_Decomp_19.gif" width="441" height="57" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_20.png" alt="DDA_RankOne_Decomp_20.png" width="528" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_21.gif" alt="DDA_RankOne_Decomp_21.gif" width="441" height="57" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_22.png" alt="DDA_RankOne_Decomp_22.png" width="566" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_23.gif" alt="DDA_RankOne_Decomp_23.gif" width="447" height="57" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_24.png" alt="DDA_RankOne_Decomp_24.png" width="566" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_25.gif" alt="DDA_RankOne_Decomp_25.gif" width="447" height="57" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_26.png" alt="DDA_RankOne_Decomp_26.png" width="387" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_27.png" alt="DDA_RankOne_Decomp_27.png" width="444" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Basic Analysis and validity criteria
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_28.png" alt="DDA_RankOne_Decomp_28.png" width="598" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_29.png" alt="DDA_RankOne_Decomp_29.png" width="711" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_30.png" alt="DDA_RankOne_Decomp_30.png" width="801" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_31.png" alt="DDA_RankOne_Decomp_31.png" width="713" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_32.png" alt="DDA_RankOne_Decomp_32.png" width="752" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_33.png" alt="DDA_RankOne_Decomp_33.png" width="1274" height="100" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_34.gif" alt="DDA_RankOne_Decomp_34.gif" width="250" height="256" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_35.png" alt="DDA_RankOne_Decomp_35.png" width="732" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_36.png" alt="DDA_RankOne_Decomp_36.png" width="1047" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The validity criteria for the Discrete Dipole Approximation is valid are<br /><span><span>|m|k d &le; 1</span></span><br /><br />m is the complex refractive of the material<br />k is wave number given by <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_37.png" alt="DDA_RankOne_Decomp_37.png" width="31" height="45" style="vertical-align:middle" /></span></span><br />d is the dimension of volume of region equivalently described by the dipole<br />&lambda; is the wavelength
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_38.png" alt="DDA_RankOne_Decomp_38.png" width="1266" height="130" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_39.gif" alt="DDA_RankOne_Decomp_39.gif" width="250" height="235" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_40.png" alt="DDA_RankOne_Decomp_40.png" width="732" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_41.png" alt="DDA_RankOne_Decomp_41.png" width="1047" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ With FCC structure, number of atoms in single dipole volume with size of length of dipole volume:
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_42.png" alt="DDA_RankOne_Decomp_42.png" width="1010" height="111" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_43.gif" alt="DDA_RankOne_Decomp_43.gif" width="250" height="237" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_44.png" alt="DDA_RankOne_Decomp_44.png" width="300" height="22" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_45.png" alt="DDA_RankOne_Decomp_45.png" width="68" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_46.png" alt="DDA_RankOne_Decomp_46.png" width="673" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_47.png" alt="DDA_RankOne_Decomp_47.png" width="988" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The dipole polarizability is given by using Clausius-Mossotti relationship,<br /><span><span><img src="HTMLFiles/DDA_RankOne_Decomp_48.png" alt="DDA_RankOne_Decomp_48.png" width="132" height="56" style="vertical-align:middle" /></span></span>, <br />where <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_49.png" alt="DDA_RankOne_Decomp_49.png" width="13" height="27" style="vertical-align:middle" /></span></span> is the dielectric function and <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_50.png" alt="DDA_RankOne_Decomp_50.png" width="18" height="24" style="vertical-align:middle" /></span></span> is the cubical sub-volume. <br /><br />Using the filtered coupled dipole method, the polarizability is given by,<br /><br /><span><span><img src="HTMLFiles/DDA_RankOne_Decomp_51.png" alt="DDA_RankOne_Decomp_51.png" width="114" height="44" style="vertical-align:middle" /></span></span> where,<br /><br /><span><span><img src="HTMLFiles/DDA_RankOne_Decomp_52.png" alt="DDA_RankOne_Decomp_52.png" width="407" height="59" style="vertical-align:middle" /></span></span>
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_53.png" alt="DDA_RankOne_Decomp_53.png" width="210" height="22" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_54.png" alt="DDA_RankOne_Decomp_54.png" width="244" height="22" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_55.png" alt="DDA_RankOne_Decomp_55.png" width="222" height="46" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_56.png" alt="DDA_RankOne_Decomp_56.png" width="1101" height="45" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_57.png" alt="DDA_RankOne_Decomp_57.png" width="390" height="75" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_58.png" alt="DDA_RankOne_Decomp_58.png" width="721" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_59.png" alt="DDA_RankOne_Decomp_59.png" width="1049" height="33" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_60.png" alt="DDA_RankOne_Decomp_60.png" width="727" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_61.png" alt="DDA_RankOne_Decomp_61.png" width="1058" height="33" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_62.png" alt="DDA_RankOne_Decomp_62.png" width="638" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_63.png" alt="DDA_RankOne_Decomp_63.png" width="847" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_64.png" alt="DDA_RankOne_Decomp_64.png" width="154" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_65.png" alt="DDA_RankOne_Decomp_65.png" width="473" height="33" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Polarization of a single dipole volume in electromagnetic field
+</p>
+
+
+
+<p class="Text">
+ Defining a electromagnetic radiation moving along Z axis. k vector given the direction of the propagation of the beam. The electric field vector for a moving electromagnetic wave along the z direction is given by,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_66.png" alt="DDA_RankOne_Decomp_66.png" width="687" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_67.png" alt="DDA_RankOne_Decomp_67.png" width="454" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_68.png" alt="DDA_RankOne_Decomp_68.png" width="480" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_69.png" alt="DDA_RankOne_Decomp_69.png" width="255" height="22" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_70.png" alt="DDA_RankOne_Decomp_70.png" width="258" height="22" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_71.png" alt="DDA_RankOne_Decomp_71.png" width="258" height="22" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_72.png" alt="DDA_RankOne_Decomp_72.png" width="465" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_73.png" alt="DDA_RankOne_Decomp_73.png" width="559" height="30" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Based on the first Maxwell&rsquo;s equation, <span><span>&nabla;.E=0</span></span>
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_74.png" alt="DDA_RankOne_Decomp_74.png" width="146" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_75.png" alt="DDA_RankOne_Decomp_75.png" width="648" height="23" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ So a vertical moving electromagnetic radiation k vector is&nbsp;&nbsp;(for a given wavelength), its only possible if electric field vector along Z axis should be zero (Maxwell&rsquo;s first equation). Also, as electric field and magnetic fields are also perpendicular to each other, we assume electric field is along x axis for the propagating electromagnetic radiation along Z axis.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_76.png" alt="DDA_RankOne_Decomp_76.png" width="142" height="41" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_77.png" alt="DDA_RankOne_Decomp_77.png" width="260" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_78.png" alt="DDA_RankOne_Decomp_78.png" width="101" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_79.png" alt="DDA_RankOne_Decomp_79.png" width="325" height="36" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_80.png" alt="DDA_RankOne_Decomp_80.png" width="589" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_81.png" alt="DDA_RankOne_Decomp_81.png" width="681" height="42" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_82.png" alt="DDA_RankOne_Decomp_82.png" width="617" height="62" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_83.png" alt="DDA_RankOne_Decomp_83.png" width="799" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_84.png" alt="DDA_RankOne_Decomp_84.png" width="188" height="62" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_85.png" alt="DDA_RankOne_Decomp_85.png" width="295" height="41" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_86.png" alt="DDA_RankOne_Decomp_86.png" width="275" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_87.png" alt="DDA_RankOne_Decomp_87.png" width="132" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_88.png" alt="DDA_RankOne_Decomp_88.png" width="1222" height="104" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_89.png" alt="DDA_RankOne_Decomp_89.png" width="287" height="152" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_90.png" alt="DDA_RankOne_Decomp_90.png" width="1171" height="80" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_91.png" alt="DDA_RankOne_Decomp_91.png" width="1171" height="80" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_92.png" alt="DDA_RankOne_Decomp_92.png" width="203" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_93.gif" alt="DDA_RankOne_Decomp_93.gif" width="498" height="250" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ 2. Dipole-Dipole Interaction in the presence of input electromagnetic radiation
+</p>
+
+
+
+<p class="Subsection">
+ Creating generalized formulation of A matrix 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_94.png" alt="DDA_RankOne_Decomp_94.png" width="196" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_95.png" alt="DDA_RankOne_Decomp_95.png" width="142" height="41" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_96.png" alt="DDA_RankOne_Decomp_96.png" width="490" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_97.png" alt="DDA_RankOne_Decomp_97.png" width="307" height="42" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_98.png" alt="DDA_RankOne_Decomp_98.png" width="1218" height="279" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_99.png" alt="DDA_RankOne_Decomp_99.png" width="700" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Calculating total A matrix assuming polarizability &alpha; of all the dipoles is same.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_100.png" alt="DDA_RankOne_Decomp_100.png" width="1121" height="152" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The A matrix for two dipoles is given by with polarizability defined by Clausius-Mossotti relationship
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_101.png" alt="DDA_RankOne_Decomp_101.png" width="1290" height="46" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_102.png" alt="DDA_RankOne_Decomp_102.png" width="1147" height="328" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Inverting A Matrix and simplifying
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_103.png" alt="DDA_RankOne_Decomp_103.png" width="587" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_104.png" alt="DDA_RankOne_Decomp_104.png" width="2319" height="472" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The scattered electric field at a given point is given by: 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_105.png" alt="DDA_RankOne_Decomp_105.png" width="849" height="99" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ 3. Example Matrix Formulation on 1/2/3 dimensional array of dipoles
+</p>
+
+
+
+<p class="Subsubsection">
+ One dimensional array of dipoles
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_106.png" alt="DDA_RankOne_Decomp_106.png" width="996" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_107.png" alt="DDA_RankOne_Decomp_107.png" width="381" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_108.png" alt="DDA_RankOne_Decomp_108.png" width="1030" height="100" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_109.gif" alt="DDA_RankOne_Decomp_109.gif" width="625" height="31" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_110.png" alt="DDA_RankOne_Decomp_110.png" width="983" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_111.gif" alt="DDA_RankOne_Decomp_111.gif" width="625" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_112.png" alt="DDA_RankOne_Decomp_112.png" width="479" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_113.png" alt="DDA_RankOne_Decomp_113.png" width="528" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The matrix structure of A looks like, 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_114.png" alt="DDA_RankOne_Decomp_114.png" width="777" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_115.gif" alt="DDA_RankOne_Decomp_115.gif" width="448" height="225" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_116.png" alt="DDA_RankOne_Decomp_116.png" width="648" height="25" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_117.png" alt="DDA_RankOne_Decomp_117.png" width="690" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_118.png" alt="DDA_RankOne_Decomp_118.png" width="1173" height="152" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Two dimensional array of dipoles
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_119.png" alt="DDA_RankOne_Decomp_119.png" width="601" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_120.png" alt="DDA_RankOne_Decomp_120.png" width="1190" height="74" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_121.gif" alt="DDA_RankOne_Decomp_121.gif" width="250" height="200" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_122.png" alt="DDA_RankOne_Decomp_122.png" width="963" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_123.gif" alt="DDA_RankOne_Decomp_123.gif" width="250" height="250" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_124.png" alt="DDA_RankOne_Decomp_124.png" width="528" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The matrix structure of A looks like, 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_125.png" alt="DDA_RankOne_Decomp_125.png" width="777" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_126.gif" alt="DDA_RankOne_Decomp_126.gif" width="448" height="225" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_127.png" alt="DDA_RankOne_Decomp_127.png" width="648" height="25" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_128.png" alt="DDA_RankOne_Decomp_128.png" width="682" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Testing three dimensional array of dipoles
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_129.png" alt="DDA_RankOne_Decomp_129.png" width="710" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_130.png" alt="DDA_RankOne_Decomp_130.png" width="1190" height="74" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_131.gif" alt="DDA_RankOne_Decomp_131.gif" width="250" height="286" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_132.png" alt="DDA_RankOne_Decomp_132.png" width="1192" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_133.gif" alt="DDA_RankOne_Decomp_133.gif" width="250" height="272" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_134.png" alt="DDA_RankOne_Decomp_134.png" width="528" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The matrix structure of A looks like, 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_135.png" alt="DDA_RankOne_Decomp_135.png" width="777" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_136.gif" alt="DDA_RankOne_Decomp_136.gif" width="448" height="225" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ 4. Rank One Decomposition Method : Updating the polarizability of dipole
+</p>
+
+
+
+<p class="Text">
+ In this section, we demonstrate the implementation of Rank One Decomposition Method to demonstrate the efficient computational method to investigate nanomaterials growth and etching process. In this section, we setup an example describing updating the A matrix when the polarizability of a dipole is updated. We will compare the direct solution and using rank-one decomposition method. Consider three dipoles at positions, <span><span>{{0,0,0}, {m,0,0},{0,m,0}}</span></span>.&nbsp;&nbsp;
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_137.png" alt="DDA_RankOne_Decomp_137.png" width="196" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_138.png" alt="DDA_RankOne_Decomp_138.png" width="142" height="41" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_139.png" alt="DDA_RankOne_Decomp_139.png" width="490" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_140.png" alt="DDA_RankOne_Decomp_140.png" width="363" height="42" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_141.png" alt="DDA_RankOne_Decomp_141.png" width="1218" height="279" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_142.png" alt="DDA_RankOne_Decomp_142.png" width="746" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Calculating total A matrix assuming polarizability &alpha; of all the dipoles is same.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_143.png" alt="DDA_RankOne_Decomp_143.png" width="1190" height="152" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The A matrix for two dipoles of same polarizability <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_144.png" alt="DDA_RankOne_Decomp_144.png" width="20" height="24" style="vertical-align:middle" /></span></span>, which defines the initial A matrix and its inverse is given by 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_145.png" alt="DDA_RankOne_Decomp_145.png" width="1258" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_146.png" alt="DDA_RankOne_Decomp_146.png" width="1147" height="310" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The inverse of A matrix which is used as initial solution when the polarizability is updated.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_147.png" alt="DDA_RankOne_Decomp_147.png" width="674" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_148.png" alt="DDA_RankOne_Decomp_148.png" width="1679" height="510" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Consider the case when the property of the second dipole is changed from <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_149.png" alt="DDA_RankOne_Decomp_149.png" width="20" height="24" style="vertical-align:middle" /></span></span> to <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_150.png" alt="DDA_RankOne_Decomp_150.png" width="20" height="24" style="vertical-align:middle" /></span></span>, in that case the updated matrix using direct method is given by,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_151.png" alt="DDA_RankOne_Decomp_151.png" width="1298" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_152.png" alt="DDA_RankOne_Decomp_152.png" width="1147" height="310" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ and, the inverted A matrix for the new solution is given by,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_153.png" alt="DDA_RankOne_Decomp_153.png" width="734" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_154.png" alt="DDA_RankOne_Decomp_154.png" width="1733" height="510" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ To demonstrate the rank-one decomposition method : If <span><em>A</em></span> and <span><span>(A+B)</span></span> are invertible, and <span><em>B</em></span> has rank one, then let <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_155.png" alt="DDA_RankOne_Decomp_155.png" width="89" height="26" style="vertical-align:middle" /></span></span>. If <span><span>g&ne;-1</span></span>, we have <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_156.png" alt="DDA_RankOne_Decomp_156.png" width="233" height="49" style="vertical-align:middle" /></span></span>.<br /><br />Here, <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_157.png" alt="DDA_RankOne_Decomp_157.png" width="402" height="49" style="vertical-align:middle" /></span></span>, where <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_158.png" alt="DDA_RankOne_Decomp_158.png" width="29" height="24" style="vertical-align:middle" /></span></span> is the initial solution and B matrix updates the polarizability along each axis sequentially. <br />The B matrices along X, Y, and Z are given by
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_159.gif" alt="DDA_RankOne_Decomp_159.gif" width="471" height="142" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The A matrix for updated polarizability can be described as <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_160.png" alt="DDA_RankOne_Decomp_160.png" width="216" height="27" style="vertical-align:middle" /></span></span>. Checking, if they are equal 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_161.png" alt="DDA_RankOne_Decomp_161.png" width="313" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_162.png" alt="DDA_RankOne_Decomp_162.png" width="39" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Using the rank-one decomposition, the inverted solution can be defined as,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_163.png" alt="DDA_RankOne_Decomp_163.png" width="561" height="44" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Updating the inverted matrix for change in polarizability along X
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_164.png" alt="DDA_RankOne_Decomp_164.png" width="745" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Updating the inverted matrix for change in polarizability along Y
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_165.png" alt="DDA_RankOne_Decomp_165.png" width="497" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Updating the inverted matrix for change in polarizability along Z
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_166.png" alt="DDA_RankOne_Decomp_166.png" width="575" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The final inverted matrix from rank-one decomposition method is,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_167.png" alt="DDA_RankOne_Decomp_167.png" width="265" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_168.png" alt="DDA_RankOne_Decomp_168.png" width="1733" height="510" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Checking if the inverted matrices from direct solution and rank-one decomposition method are equivalent,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_169.png" alt="DDA_RankOne_Decomp_169.png" width="287" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_170.png" alt="DDA_RankOne_Decomp_170.png" width="39" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ and&nbsp;&nbsp;<span><span><img src="HTMLFiles/DDA_RankOne_Decomp_171.png" alt="DDA_RankOne_Decomp_171.png" width="64" height="24" style="vertical-align:middle" /></span></span>
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_172.png" alt="DDA_RankOne_Decomp_172.png" width="514" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_173.png" alt="DDA_RankOne_Decomp_173.png" width="143" height="128" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ 5. Rank One Decomposition Method : Adding a new dipole
+</p>
+
+
+
+<p class="Text">
+ We start with considering a case when two dipoles is present at {{0, 0, 0}, {m, 0, 0}} and a new dipole is added at {2m, 0, 0}. Assuming all dipoles have same polarizability &alpha;, the initial A matrix and its inverse for the first dipoles is given by,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_174.png" alt="DDA_RankOne_Decomp_174.png" width="1258" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_175.png" alt="DDA_RankOne_Decomp_175.png" width="1147" height="310" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_176.png" alt="DDA_RankOne_Decomp_176.png" width="674" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_177.png" alt="DDA_RankOne_Decomp_177.png" width="1679" height="510" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Considering a new dipole added at {m, 0, 0} with polarizability &alpha;1, the updated A matrix and its inverse is given by
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_178.png" alt="DDA_RankOne_Decomp_178.png" width="1224" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_179.png" alt="DDA_RankOne_Decomp_179.png" width="1740" height="466" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The direct solution of the inverse of A matrix with three dipoles,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_180.png" alt="DDA_RankOne_Decomp_180.png" width="769" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ 
+</p>
+
+<p class="Text">
+ Starting with the&nbsp;&nbsp;A matrix of the two dipole case, the updated matrix for three dipoles is given by,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_182.gif" alt="DDA_RankOne_Decomp_182.gif" width="1500" height="100" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_183.png" alt="DDA_RankOne_Decomp_183.png" width="1267" height="406" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Here, all the coefficients <span><em>A</em><em>&lt;</em><em>i</em><em>&gt;</em><em>&lt;</em><em>j</em><em>&gt;</em></span> are known from the A matrix for 3x3 dipoles. Starting with the inverted A matrix for the two dipoles, the inverted matrix for three dipoles can be created in three steps by adding single row and column at a time. For a single row and column addition, generating part of A matrix without considering dipole-dipole interactions,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_184.png" alt="DDA_RankOne_Decomp_184.png" width="754" height="124" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_185.png" alt="DDA_RankOne_Decomp_185.png" width="968" height="100" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_186.png" alt="DDA_RankOne_Decomp_186.png" width="1710" height="532" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The dipole-dipole interactions are adding by adding a single row and column matrix, which could be defined by B1 and B2. And, hence single row and column addition is defined by <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_187.png" alt="DDA_RankOne_Decomp_187.png" width="159" height="24" style="vertical-align:middle" /></span></span>.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_188.gif" alt="DDA_RankOne_Decomp_188.gif" width="678" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_189.png" alt="DDA_RankOne_Decomp_189.png" width="263" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_190.png" alt="DDA_RankOne_Decomp_190.png" width="1292" height="358" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ To calculate the inverse of the <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_191.png" alt="DDA_RankOne_Decomp_191.png" width="26" height="24" style="vertical-align:middle" /></span></span> matrix, we update the solution using rank-one decomposition method in two steps.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_192.png" alt="DDA_RankOne_Decomp_192.png" width="436" height="44" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Hence, the solution of single step can be defined by, 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_193.png" alt="DDA_RankOne_Decomp_193.png" width="1068" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_194.png" alt="DDA_RankOne_Decomp_194.png" width="294" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_195.png" alt="DDA_RankOne_Decomp_195.png" width="3155" height="578" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ To check the validity of single step solution,&nbsp;&nbsp;we show <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_196.png" alt="DDA_RankOne_Decomp_196.png" width="121" height="27" style="vertical-align:middle" /></span></span>, where I is the identity matrix
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_197.png" alt="DDA_RankOne_Decomp_197.png" width="576" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_198.png" alt="DDA_RankOne_Decomp_198.png" width="164" height="150" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_199.png" alt="DDA_RankOne_Decomp_199.png" width="638" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_200.png" alt="DDA_RankOne_Decomp_200.png" width="39" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Using the strategy as described above, here we start with the initial inverse A matrix of two dipoles and update the inverse matrix for the three dipole system in three consecutive steps. (from 6&times;6 matrix to 9&times;9)
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_201.png" alt="DDA_RankOne_Decomp_201.png" width="501" height="122" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_202.gif" alt="DDA_RankOne_Decomp_202.gif" width="990" height="230" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_203.png" alt="DDA_RankOne_Decomp_203.png" width="164" height="150" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_204.png" alt="DDA_RankOne_Decomp_204.png" width="960" height="306" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_205.png" alt="DDA_RankOne_Decomp_205.png" width="185" height="172" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_206.png" alt="DDA_RankOne_Decomp_206.png" width="462" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_207.gif" alt="DDA_RankOne_Decomp_207.gif" width="960" height="279" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_208.png" alt="DDA_RankOne_Decomp_208.png" width="206" height="194" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Checking if product of updated A matrix and inverse calculated using rank-one decomposition is correct
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_209.png" alt="DDA_RankOne_Decomp_209.png" width="607" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_210.png" alt="DDA_RankOne_Decomp_210.png" width="206" height="194" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_211.png" alt="DDA_RankOne_Decomp_211.png" width="673" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_212.png" alt="DDA_RankOne_Decomp_212.png" width="39" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ 6. Rank One Decomposition Method : Removing an existing dipole
+</p>
+
+
+
+<p class="Text">
+ Consider a system of three dipoles, where the dipoles are placed at {{0,0,0}, {m,0,0},{2m,0,0}}. The third dipole at {2m,0,0} is removed in the process. The strategy of removing the dipole is similar to the one in adding the dipoles, however in opposite fashion. We start with initial A matrix and its inverse for two dipoles, given by
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_213.png" alt="DDA_RankOne_Decomp_213.png" width="1195" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_214.png" alt="DDA_RankOne_Decomp_214.png" width="1740" height="466" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Inverse of A matrix is given by,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_215.png" alt="DDA_RankOne_Decomp_215.png" width="674" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ 
+</p>
+
+<p class="Text">
+ Similar to the addition case, the new inverse of A matrix is generated using three steps sequentially. <br />We create two matrices B1 and B2 with a negative sign, where <span><span><img src="HTMLFiles/DDA_RankOne_Decomp_217.png" alt="DDA_RankOne_Decomp_217.png" width="104" height="24" style="vertical-align:middle" /></span></span> removes the dipole-dipole interaction terms in the last row and column, which is given by
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_218.png" alt="DDA_RankOne_Decomp_218.png" width="627" height="74" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_219.png" alt="DDA_RankOne_Decomp_219.png" width="302" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_220.png" alt="DDA_RankOne_Decomp_220.png" width="1547" height="444" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Using the rank-one decomposition with the initial inverse of A matrix, the update
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_221.gif" alt="DDA_RankOne_Decomp_221.gif" width="543" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_222.png" alt="DDA_RankOne_Decomp_222.png" width="5620" height="628" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_223.png" alt="DDA_RankOne_Decomp_223.png" width="552" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_224.gif" alt="DDA_RankOne_Decomp_224.gif" width="627" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_225.gif" alt="DDA_RankOne_Decomp_225.gif" width="611" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_226.png" alt="DDA_RankOne_Decomp_226.png" width="3181" height="578" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_227.png" alt="DDA_RankOne_Decomp_227.png" width="552" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_228.gif" alt="DDA_RankOne_Decomp_228.gif" width="627" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_229.gif" alt="DDA_RankOne_Decomp_229.gif" width="611" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_230.png" alt="DDA_RankOne_Decomp_230.png" width="1679" height="510" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The expected inverse matrix for single dipole is,
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_231.png" alt="DDA_RankOne_Decomp_231.png" width="1067" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_232.png" alt="DDA_RankOne_Decomp_232.png" width="548" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_233.png" alt="DDA_RankOne_Decomp_233.png" width="143" height="128" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_234.png" alt="DDA_RankOne_Decomp_234.png" width="610" height="21" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/DDA_RankOne_Decomp_235.png" alt="DDA_RankOne_Decomp_235.png" width="39" height="21" style="vertical-align:middle" />
+</p>
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+</body>
+
+</html>

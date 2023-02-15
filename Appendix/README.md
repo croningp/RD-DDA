@@ -1,0 +1,1 @@
+## This folder contains all the codes related to implement RD-DDA to study the spectral evolution during the structure transform in the paper. 
