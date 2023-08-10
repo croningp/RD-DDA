@@ -1,5 +1,5 @@
 # PyDScat-GPU
-This package is used for the rank-one decomposition to accelerate the solution of the discrete-dipole approximation (RD-DDA) with GPU. A concrete example for the mathematical formulation is [here](./Mathematica/DDA_RankOne_Decomp.htm). See [here](./pydscat/README.md) for the definitions of the parameters.
+This package is used for the rank-one decomposition to accelerate the solution of the discrete-dipole approximation (RD-DDA) with GPU, described in the publication of "[An Accelerated Method for Investigating Spectral Properties of Dynamically Evolving Nanostructures](https://pubs.acs.org/doi/10.1021/acs.jpclett.3c00395)". A concrete example for the mathematical formulation is [here](./Mathematica/DDA_RankOne_Decomp.htm). See [here](./pydscat/README.md) for the definitions of the parameters.
 ## Environment requirement
 * Python >= 3.6 ([Linux](http://docs.python-guide.org/en/latest/starting/install3/linux/)) (Only Linux environment is supported due to the plot tool)
 ## Python library
